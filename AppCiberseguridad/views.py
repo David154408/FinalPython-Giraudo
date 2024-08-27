@@ -30,6 +30,7 @@ def app_form(req):
        
     return render(req , 'AppCiberseguridad/appFormulario.html')
 
+
 def busquedaCliente(request) :
     return render(request, "AppCiberseguridad/busquedaCliente.html")
 
