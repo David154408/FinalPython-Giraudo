@@ -34,16 +34,16 @@ def app_form(req):
 def busquedaCliente(request) :
     return render(request, "AppCiberseguridad/busquedaCliente.html")
 
-def buscar(request):
     
+def buscar(request):
     cliente_nombre = request.GET.get('cliente')
     
     if cliente_nombre:
-        respuesta = f"Estoy buscando el cliente: {cliente_nombre}"
+        resultados = ClienteModel.objects.filter(nombre__icontains=cliente_nombre)
     else:
-        respuesta = "No se ha proporcionado un nombre de cliente."
-
-    # Retornar la respuesta como una instancia de HttpResponse
-    return HttpResponse(respuesta)
-
-
+        resultados = []
+    
+    return render(request, 'AppCiberseguridad/resultadoBusqueda.html', {
+        'cliente_nombre': cliente_nombre,
+        'resultados': resultados,
+    })

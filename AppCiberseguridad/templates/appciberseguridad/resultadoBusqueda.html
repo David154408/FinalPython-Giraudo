@@ -7,18 +7,18 @@
 </head>
 <body>
     
-    <p> Estamos buscando el : {{cliente }} </p>
+    <h1>Resultados de la Búsqueda para "{{ cliente_nombre }}"</h1>
+    
+    {% if resultados %}
+        <ul>
+            {% for cliente in resultados %}
+                <li>Nombre: {{ cliente.nombre }}, Correo: {{ cliente.correo_electronico }}, Teléfono: {{ cliente.telefono }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron clientes con ese nombre.</p>
+    {% endif %}
 
-{% if cliente %}
-<ul>
-    {% for cliente in cliente %}
-    <li>{{ cliente.nombre}}</li>
-    <li>{{ cliente.correo_electronico}}</li>
-    <li>{{ cliente.telefono}}</li>
-    <li>{{ cliente.direccion}}</li>
-    {% endfor %}
-</ul>
-
-{%% endif %}
+    <a href="{% url 'BusquedaCliente' %}">Volver a la búsqueda</a>
 </body>
 </html>
