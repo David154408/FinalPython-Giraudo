@@ -3,6 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Cliente</title>
+</head>
+<body>
+    {% extends "appciberseguridad/padre.html" %}  
+     
+    {% load static %}
+    
+    {% block contenidoQueCambia %}
+    
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Buscar Cliente</h2>
+        <form action="{% url 'buscar' %}" method="GET" class="d-flex justify-content-center">
+            <div class="input-group" style="max-width: 400px;">
+                <input type="text" name="cliente" id="cliente" class="form-control" placeholder="Escribe el nombre del cliente..." aria-label="Buscar Cliente">
+                <button class="btn btn-primary" type="submit">Buscar</button>
+            </div>
+        </form>
+    </div>  
+    
+    {% endblock %}
+    
+</body>
+</html>
+
+
+<!-- El codico en si , sin usar la ayuda de ia para darle forma a dicho resultado 
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
@@ -14,3 +45,4 @@
     
 </body>
 </html>
+ --> 

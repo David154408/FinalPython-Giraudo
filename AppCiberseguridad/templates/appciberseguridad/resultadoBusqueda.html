@@ -3,6 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Búsqueda</title>
+</head>
+<body>
+    {% extends "appciberseguridad/padre.html" %}  
+     
+    {% load static %}
+    
+    {% block contenidoQueCambia %}
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Resultados de la Búsqueda para "{{ cliente_nombre }}"</h1>
+        
+        {% if resultados %}
+            <div class="list-group">
+                {% for cliente in resultados %}
+                    <div class="list-group-item">
+                        <h5 class="mb-1">{{ cliente.nombre }}</h5>
+                        <p class="mb-1"><strong>Correo:</strong> {{ cliente.correo_electronico }}</p>
+                        <p class="mb-1"><strong>Teléfono:</strong> {{ cliente.telefono }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="alert alert-warning text-center" role="alert">
+                No se encontraron clientes con ese nombre.
+            </div>
+        {% endif %}
+        
+        <div class="text-center mt-4">
+            <a href="{% url 'BusquedaCliente' %}" class="btn btn-primary">Volver a la búsqueda</a>
+        </div>
+    </div>
+
+    {% endblock %}
+    
+</body>
+</html>
+
+<!-- El codigo en si , sin usar ia para que le de formato para que quede mas bonito 
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
@@ -22,3 +66,4 @@
     <a href="{% url 'BusquedaCliente' %}">Volver a la búsqueda</a>
 </body>
 </html>
+-->
