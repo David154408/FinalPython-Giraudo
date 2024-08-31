@@ -3,8 +3,12 @@ from django.shortcuts import render
 from AppCiberseguridad.models import Cliente as ClienteModel
 # Create your views here.
 
-def Inicio(req):
+def padre(req):
     return render(req, 'AppCiberseguridad/padre.html')
+    
+    
+def Inicio(req):
+    return render(req, 'AppCiberseguridad/index.html')
 
 def Producto(req):
     return render(req, 'AppCiberseguridad/producto.html')
