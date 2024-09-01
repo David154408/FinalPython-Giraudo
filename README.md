@@ -19,12 +19,16 @@ Una ves que ingresemos a través de ese botón o escribiendo  AppCiberseguridad/
 Botón que dice Subscribete:
 Una ves que ingresemos a través de ese botón o escribiendo  AppCiberseguridad/cliente { podremos observar que nos llevara a la plantilla cliente , la cuales heredara todo de padre.html  }
 
-Boton Buscador: 
-En este botono nos encotnraamos con nuetro buscador de clientes 
+Boton que dice  Buscador: 
+En este boton nos encotramos con nuestro buscador de clientes  
+
+Boton que dice  Agregar CLiente: 
+También tenemos un formulario el cual nos agregara un cliente a la base de dato 
+
 
 También tenemos una base de datos la cual hemos creado , si ingresamos a http://localhost:8000/admin/ , podremos ingresar a la Administración de Django 
 Usuario admin = Charli , contraseña= 154408  { este es el admin principal } 
 
-También tenemos un formulario el cual nos agregara un cliente a la base de datos , ingresando a http://localhost:8000/AppCiberseguridad/app-form/
+s 
 
 En algunos html se utilizo la ia para que nos de una forma mas ordenada y bonita para el ususario 
