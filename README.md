@@ -29,6 +29,6 @@ También tenemos un formulario el cual nos agregara un cliente a la base de dato
 También tenemos una base de datos la cual hemos creado , si ingresamos a http://localhost:8000/admin/ , podremos ingresar a la Administración de Django 
 Usuario admin = Charli , contraseña= 154408  { este es el admin principal } 
 
-s 
+
 
 En algunos html se utilizo la ia para que nos de una forma mas ordenada y bonita para el ususario 
