@@ -30,7 +30,7 @@ def app_form(req):
             )
         
         cliente.save()
-        return render(req,"AppCiberseguridad/index.html")
+        return render(req,"AppCiberseguridad/padre.html")
        
     return render(req , 'AppCiberseguridad/appFormulario.html')
 
