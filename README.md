@@ -32,4 +32,8 @@ Usuario admin = Charli , contraseña= 154408  { este es el admin principal }
 Si queremos agregar un producto podemos ingresar al :
 http://localhost:8000/admin/app-formproducto
 
+si queremos agregar un producto podermos ingresar al : 
+http://localhost:8000/admin/app-formopiniones 
+
+
 En algunos html se utilizo la ia para que nos de una forma mas ordenada y bonita para el ususario 
