@@ -23,7 +23,8 @@ def login_request(request):
         msg_login = "Usuario o contraseña incorrectos"
 
     form = AuthenticationForm()
-    return render(request, "user/login.html", {"form": form, "msg_login": msg_login})
+    return render(request, "users/login.html", {"form": form, "msg_login": msg_login}) 
+
 
 def register(request):
 
@@ -40,4 +41,4 @@ def register(request):
         msg_register = "Error en los datos ingresados"
 
     form = UserRegisterForm()     
-    return render(request,"user/registro.html" ,  {"form":form, "msg_register": msg_register})
+    return render(request,"users/registro.html" ,  {"form":form, "msg_register": msg_register})

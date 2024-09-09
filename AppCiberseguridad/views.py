@@ -4,6 +4,7 @@ from AppCiberseguridad.models import Cliente as ClienteModel
 from AppCiberseguridad.models import Producto as ProductoModel
 from AppCiberseguridad.models import Opiniones as OpinionesModel 
 from .models import Opiniones
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -14,12 +15,15 @@ def padre(req):
 def Inicio(req):
     return render(req, 'AppCiberseguridad/index.html')
 
+@login_required
 def Producto(req):
     return render(req, 'AppCiberseguridad/producto.html')
 
+@login_required
 def Cliente(req):
   return render(req, 'AppCiberseguridad/cliente.html')
 
+@login_required
 def Opiniones(req):
     return render(req, 'AppCiberseguridad/opiniones.html')
 

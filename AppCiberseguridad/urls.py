@@ -20,12 +20,13 @@ urlpatterns = [
        
 ]
 
-urls_vistas_clases= [
-    path('clases/lista/', views_clases.OpinionesListView.as_view(), name='List'),
+urls_vistas_clases = [
+    path('clases/lista/', views_clases.OpinionesListView.as_view(), name='opiniones_list'), 
     path('clases/detalle/<int:pk>/', views_clases.OpinionesDetailView.as_view(), name='Detail'),
     path('clases/nuevo/', views_clases.OpinionesCreateView.as_view(), name='New'),
     path('clases/editar/<int:pk>/', views_clases.OpinionesUpdateView.as_view(), name='Edit'),
     path('clases/eliminar/<int:pk>/', views_clases.OpinionesDeleteView.as_view(), name='Delete'),
 ]
+
 
 urlpatterns += urls_vistas_clases 
