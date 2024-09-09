@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends "appciberseguridad/padre.html" %}
+
+{% block contenidoQueCambia %}
+<h1>Detalles de la Opinión</h1>
+
+<p><strong>Nombre:</strong> {{ object.nombre }}</p>
+<p><strong>Descripción:</strong> {{ object.descripcion }}</p>
+
+<a href="{% url 'Edit' object.pk %}">Editar</a> |
+<a href="{% url 'Delete' object.pk %}">Eliminar</a> |
+<a href="{% url 'List' %}">Volver a la lista</a>
+{% endblock %}
+</body>
+</html>

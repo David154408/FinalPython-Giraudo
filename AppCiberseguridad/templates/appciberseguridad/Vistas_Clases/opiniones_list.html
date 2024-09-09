@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+{% block contenidoQueCambia %}
+<h1>Lista de Opiniones</h1>
+
+<ul>
+    {% for opinion in object_list %}
+    <li>
+        <strong>{{ opinion.nombre }}</strong>: {{ opinion.descripcion }}
+        <a href="{% url 'Detail' opinion.pk %}">Ver detalles</a> |
+        <a href="{% url 'Edit' opinion.pk %}">Editar</a> |
+        <a href="{% url 'Delete' opinion.pk %}">Eliminar</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'New' %}">Agregar Nueva Opinión</a>
+{% endblock %}
+</body>
+
+</html>

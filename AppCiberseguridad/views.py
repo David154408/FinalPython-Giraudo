@@ -1,8 +1,10 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render 
 from AppCiberseguridad.models import Cliente as ClienteModel
 from AppCiberseguridad.models import Producto as ProductoModel
 from AppCiberseguridad.models import Opiniones as OpinionesModel 
+from .models import Opiniones
+
 # Create your views here.
 
 def padre(req):
@@ -30,7 +32,8 @@ def app_form(req):
         cliente = ClienteModel(
             nombre=req.POST['nombre'] ,
             correo_electronico=req.POST['correo_electronico'], 
-            telefono=req.POST['telefono'] 
+            telefono=req.POST['telefono'],
+            direccion=req.POST['direccion'] 
             )
         
         cliente.save()
@@ -79,3 +82,33 @@ def buscar(request):
         'cliente_nombre': cliente_nombre,
         'resultados': resultados,
     })
+
+def leerCliente(req):
+    clientes=ClienteModel.objects.all() 
+    contexto= {"clientes":clientes}
+    return render (req, "AppCiberseguridad/leerCLientes.html",contexto) 
+    
+def eliminarCliente(req, cliente_nombre):
+    cliente= ClienteModel.objects.get(nombre=cliente_nombre)
+    cliente.delete()
+    
+    clientes= ClienteModel.objects.all() 
+    
+    contexto={"clientes":clientes}
+    
+    return render(req, "AppCiberseguridad/leerCLientes.html",contexto ) 
+
+def leerOpinion(req):
+    opiniones=OpinionesModel.objects.all()
+    contexto={"opiniones":opiniones}
+    return render (req, 'AppCiberseguridad/leerOpinion.html', contexto)
+
+def eliminarOpinion(req, opinion_nombre):
+    opinion=OpinionesModel.objects.get(nombre=opinion_nombre)
+    opinion.delete()
+    
+    opiniones= OpinionesModel.objects.all()
+    contexto={"opiniones=":opiniones}
+    
+    return render(req,"AppCiberseguridad/leerOpinion.html", contexto) 
+   

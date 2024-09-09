@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opiniones</title>
+</head>
+<body>
+    {% extends "appciberseguridad/padre.html" %}
+    
+    {% load static %}
+    
+    {% block contenidoQueCambia %}
+    
+    <h2>Nuestras opiniones</h2>
+    <p>A continuación se muestran las opiniones dejadas por los usuarios:</p>
+
+    <ul>
+        {% for o in opiniones %}
+        <li>
+            {{ o.texto }}  
+            <button>
+                <a href="{% url 'EliminarOpinion' o.id %}">Eliminar</a>
+            </button>
+            <button>
+                <a href="{% url 'EditarOpinion' o.id %}">Editar</a>
+            </button>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'AppFormOpiniones' %}">Agregar Nueva Opinión</a>
+    
+    {% endblock %}
+</body>
+</html>

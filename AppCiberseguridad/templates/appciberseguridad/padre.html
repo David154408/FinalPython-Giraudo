@@ -27,7 +27,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="{% url 'inicio'%}">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'inicio'%}">Sobre mi</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'opiniones' %}">Opiniones</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'producto' %}">Productos</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'cliente' %}"> Subscribe</a></li>
@@ -110,7 +110,7 @@
                     <h2 class="text-white mb-4">Tu opinion es algo crucial en este mundo</h2>
                     <p class="text-white-50">
                         Te invitamos a que nos dejes opiniones para que nuestro desempeño , y mejoras que podriamos brindarles !
-                       <a href="https://startbootstrap.com/theme/grayscale/">the preview page.</a>
+                       <a href="{% url 'AppFormOpiniones' %}"> Deja Tu Opinion</a>
                         La compania toma su opinion como prioridades en esta continua evolucion instantanea que nos deja el mundo de la ciberseguridad
                     </p>
                 </div>
@@ -136,8 +136,8 @@
                         <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
                             <!-- Email address input-->
                             <div class="row input-group-newsletter">
-                                <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
-                                <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
+                                <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Ingrese su correo electronico ..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
+                                <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notificame !</button></div>
                             </div>
                             <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">Escriba su correo elctonico ...</div>
                             <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email no valido.</div>
@@ -147,10 +147,10 @@
                             <!-- has successfully submitted-->
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3 mt-2 text-white">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
+                                    <div class="fw-bolder">Muchas gracias por tu apoyo e interes !!</div>
+                                    Te mantendremos informado! Saludos 
                                     <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                    
                                 </div>
                             </div>
                             <!-- Submit error message-->
