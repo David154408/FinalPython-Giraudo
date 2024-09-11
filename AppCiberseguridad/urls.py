@@ -2,6 +2,7 @@ from django.urls import path
 from AppCiberseguridad import views
 from AppCiberseguridad import views_clases
 
+
 urlpatterns = [
     path('', views.padre, name='padre'), 
     path('producto/', views.Producto, name='producto'), 
@@ -21,7 +22,7 @@ urlpatterns = [
 ]
 
 urls_vistas_clases = [
-    path('clases/lista/', views_clases.OpinionesListView.as_view(), name='opiniones_list'), 
+    path('clases/lista/', views_clases.OpinionesListView.as_view(), name='List'), 
     path('clases/detalle/<int:pk>/', views_clases.OpinionesDetailView.as_view(), name='Detail'),
     path('clases/nuevo/', views_clases.OpinionesCreateView.as_view(), name='New'),
     path('clases/editar/<int:pk>/', views_clases.OpinionesUpdateView.as_view(), name='Edit'),

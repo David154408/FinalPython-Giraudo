@@ -14,8 +14,8 @@
     {% for opinion in object_list %}
     <li>
         <strong>{{ opinion.nombre }}</strong>: {{ opinion.descripcion }}
-        <a href="{% url 'Detail' opinion.pk %}">Ver detalles</a> |
-        <a href="{% url 'Edit' opinion.pk %}">Editar</a> |
+        <a href="{% url 'Detail' opinion.pk %}">Ver detalles</a> 
+        <a href="{% url 'Edit' opinion.pk %}">Editar</a> 
         <a href="{% url 'Delete' opinion.pk %}">Eliminar</a>
     </li>
     {% endfor %}

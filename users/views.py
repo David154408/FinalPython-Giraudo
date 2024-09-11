@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import login , authenticate
+from django.contrib.auth import login , authenticate 
 from .forms import UserRegisterForm
 
 def login_request(request):
