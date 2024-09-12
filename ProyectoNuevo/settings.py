@@ -56,10 +56,8 @@ ROOT_URLCONF = 'ProyectoNuevo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            BASE_DIR / 'AppCiberseguridad' / 'templates',
-            BASE_DIR / 'users' / 'templates',
-        ],
+        'DIRS': [  './ProyectoNuevo/template/ ' ],    
+        
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
