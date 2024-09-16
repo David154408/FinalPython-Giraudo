@@ -26,3 +26,4 @@ class Opiniones(models.Model):
 
     def __str__(self):
         return f"Nombre: {self.nombre} - Descripcion: {self.descripcion}" 
+

@@ -1,5 +1,6 @@
 from django.contrib import admin
 from AppCiberseguridad.models import Producto ,Cliente ,Opiniones 
+from .models import * 
 # Register your models here.
 
 admin.site.register(Producto)

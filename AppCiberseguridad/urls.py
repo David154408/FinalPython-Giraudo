@@ -1,6 +1,8 @@
 from django.urls import path
 from AppCiberseguridad import views
 from AppCiberseguridad import views_clases
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -30,3 +32,5 @@ urls_vistas_clases = [
 ]
 
 urlpatterns += urls_vistas_clases 
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
