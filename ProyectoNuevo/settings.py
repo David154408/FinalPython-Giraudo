@@ -57,8 +57,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            BASE_DIR / 'AppCiberseguridad' / 'templates',
-            BASE_DIR / 'users' / 'templates',
+            BASE_DIR / 'AppCiberseguridad' / 'templates' / 'appciberseguridad',
+            BASE_DIR / 'users' / 'template',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -128,3 +128,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL= "/users/login/"
+
+LOGOUT_REDIRECT_URL = 'padre'  # Página a la que redirigir después de logout

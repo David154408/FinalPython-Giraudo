@@ -112,7 +112,8 @@ def eliminarOpinion(req, opinion_nombre):
     opinion.delete()
     
     opiniones= OpinionesModel.objects.all()
-    contexto={"opiniones=":opiniones}
+    contexto={"opiniones": opiniones}
+
     
     return render(req,"AppCiberseguridad/leerOpinion.html", contexto) 
    

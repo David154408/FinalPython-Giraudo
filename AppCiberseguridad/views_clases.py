@@ -10,10 +10,11 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required 
 
 def inicio(request):
-    return render(request, "AppCiberseguridad/padre.htlm")
+    return render(request, "AppCiberseguridad/padre.html")
 
 def about(request):
-    return render(request,"AppCiberseguridad/about.htlm")
+    return render(request,"AppCiberseguridad/about.html")
+
 # Aca tenemos las vistas de  nuestro opiniones:
 
 class OpinionesListView(LoginRequiredMixin  ,ListView):
@@ -23,7 +24,6 @@ class OpinionesListView(LoginRequiredMixin  ,ListView):
     
     def get(self, request, *args, **kwargs):
         return super().get(request, *args, **kwargs)
-    
 
 class OpinionesDetailView(LoginRequiredMixin, DetailView):
     model = Opiniones
@@ -40,8 +40,9 @@ class OpinionesCreateView(LoginRequiredMixin,CreateView):
 class OpinionesUpdateView(LoginRequiredMixin, UpdateView):
     model = Opiniones
     fields = ['nombre', 'descripcion']
-    template_name = 'appciberseguridad/Vistas_Clases/opinion_form.html'
-    ssuccess_url = reverse_lazy("OpinionesList")
+    template_name = 'AppCiberseguridad/Vistas_Clases/opinion_form.html'
+    success_url = reverse_lazy("OpinionesList")
+
 
 class OpinionesDeleteView(LoginRequiredMixin, DeleteView):
     model = Opiniones

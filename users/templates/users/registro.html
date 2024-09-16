@@ -1,4 +1,4 @@
-{% extends 'AppCiberseguridad/padre.html' %}
+{% extends 'appciberseguridad/padre.html' %}
 
 {% load static %}
 
@@ -19,7 +19,7 @@
                 {% csrf_token %}
                 
                 {{ form.as_p }}
-                <input type="submit" value="Registrarse">
+                <input type="submit" value="Registrarse" class="btn btn-success">
 
             </form>
 

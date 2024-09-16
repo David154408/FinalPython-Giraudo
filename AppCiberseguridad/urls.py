@@ -22,12 +22,11 @@ urlpatterns = [
 ]
 
 urls_vistas_clases = [
-    path('clases/lista/', views_clases.OpinionesListView.as_view(), name='List'), 
-    path('clases/detalle/<int:pk>/', views_clases.OpinionesDetailView.as_view(), name='Detail'),
-    path('clases/nuevo/', views_clases.OpinionesCreateView.as_view(), name='New'),
-    path('clases/editar/<int:pk>/', views_clases.OpinionesUpdateView.as_view(), name='Edit'),
-    path('clases/eliminar/<int:pk>/', views_clases.OpinionesDeleteView.as_view(), name='Delete'),
+    path('clases/lista/', views_clases.OpinionesListView.as_view(), name='OpinionesList'), 
+    path('clases/detalle/<int:pk>/', views_clases.OpinionesDetailView.as_view(), name='OpinionesDetail'),
+    path('clases/nuevo/', views_clases.OpinionesCreateView.as_view(), name='OpinionesCreate'),
+    path('clases/editar/<int:pk>/', views_clases.OpinionesUpdateView.as_view(), name='OpinionesEdit'),
+    path('clases/eliminar/<int:pk>/', views_clases.OpinionesDeleteView.as_view(), name='OpinionesDelete'),
 ]
-
 
 urlpatterns += urls_vistas_clases 
