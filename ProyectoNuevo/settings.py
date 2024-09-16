@@ -60,6 +60,7 @@ TEMPLATES = [
         'DIRS': [
             BASE_DIR / 'AppCiberseguridad' / 'templates' / 'appciberseguridad',
             BASE_DIR / 'users' / 'template',
+            BASE_DIR / 'AppCiberseguridad' / 'templates' / 'appciberseguridad'/ 'Vistas_Clases',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
