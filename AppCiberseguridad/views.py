@@ -7,6 +7,8 @@ from AppCiberseguridad.models import Opiniones as OpinionesModel
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+def home(request):
+    return render(request, 'AppCiberseguridad/index.html')
 
 def padre(req):
     return render(req, 'AppCiberseguridad/padre.html')

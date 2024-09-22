@@ -9,13 +9,13 @@
 
 <body>
 
-    {% extends 'appciberseguridad/padre.html' %}
+    {% extends 'AppCiberseguridad/padre.html' %}
 
     {% load static %}
 
     {% block title %} Login {% endblock title %}
 
-    {% block main %}
+    {% block contenidoQueCambia %}
     <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
 
@@ -27,7 +27,7 @@
 
     </form>
 
-    {% endblock main %}
+    {% endblock contenidoQueCambia %}
 
 
 </body>

@@ -8,13 +8,13 @@
 </head>
 
 <body>
-    {% extends 'appciberseguridad/padre.html' %}
+    {% extends 'AppCiberseguridad/padre.html' %}
 
     {% load static %}
 
     {% block title %} Editar PASS {% endblock title %}
 
-    {% block main %}
+    {% block contenidoQueCambia %}
     <form action="" method="POST">
         {% csrf_token %}
 
@@ -26,7 +26,7 @@
 
     </form>
 
-    {% endblock main %}
+    {% endblockcontenidoQueCambia %}
 </body>
 
 </html>

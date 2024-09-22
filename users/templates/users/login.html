@@ -8,13 +8,13 @@
 </head>
 
 <body>
-    {% extends 'appciberseguridad/padre.html' %}
+    {% extends 'AppCiberseguridad/padre.html' %}
 
     {% load static %}
 
     {% block title %} Login {% endblock title %}
 
-    {% block main %}
+    {% block contenidoQueCambia %}
 
     {# Este div sólo está agregado para centrar el formulario en la página usando Bootstrap #}
     <div class="d-flex justify-content-center">
@@ -34,7 +34,7 @@
 
         </div>
     </div>
-    {% endblock main %}
+    {% endblock contenidoQueCambia %}
 </body>
 
 </html>
