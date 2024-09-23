@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivel Inicial de Ciberseguridad</title>
+</head>
+
+<body>
+
+    {% extends "AppCiberseguridad/padre.html" %}
+
+    {% load static %}
+
+    {% block contenidoQueCambia %}
+
+    <h1>Nivel Inicial de Ciberseguridad</h1>
+
+    <section>
+        <p>
+            Este curso está diseñado para aquellos que están dando sus primeros pasos en el mundo de la ciberseguridad. A lo largo de este nivel, aprenderás los fundamentos de la ciberseguridad, que incluyen:
+        </p>
+
+        <ul>
+            <li><strong>Conceptos básicos de redes:</strong> IP, protocolos, y firewalls.</li>
+            <li><strong>Identificación de amenazas comunes:</strong> malware, phishing, ransomware, entre otros.</li>
+            <li><strong>Herramientas de seguridad esenciales:</strong> antivirus, VPNs, y cortafuegos.</li>
+            <li><strong>Buenas prácticas de seguridad:</strong> gestión de contraseñas, autenticación de dos factores, y ciberhigiene personal.</li>
+        </ul>
+
+        <p>
+            Al finalizar este curso, estarás preparado para proteger tus dispositivos y datos personales contra las amenazas más comunes en el entorno digital.
+        </p>
+    </section>
+
+    <section>
+        <h2>¿Qué aprenderás?</h2>
+        <p>Este curso cubre las siguientes áreas clave:</p>
+
+        <ol>
+            <li><strong>Fundamentos de Ciberseguridad:</strong> Conocimiento esencial para identificar y mitigar riesgos.</li>
+            <li><strong>Análisis de Ataques Cibernéticos:</strong> Cómo funcionan los ataques más comunes y cómo defenderte de ellos.</li>
+            <li><strong>Protección de la Información Personal:</strong> Herramientas y técnicas para mantener tus datos seguros.</li>
+            <li><strong>Ciberseguridad en Pequeñas Empresas:</strong> Estrategias básicas para implementar seguridad en entornos de trabajo pequeños.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Objetivos del curso</h2>
+        <p>Al completar este curso, serás capaz de:</p>
+
+        <ul>
+            <li>Identificar los principales tipos de amenazas cibernéticas.</li>
+            <li>Utilizar herramientas de ciberseguridad para proteger dispositivos y redes.</li>
+            <li>Aplicar buenas prácticas de seguridad en tu día a día digital.</li>
+            <li>Reconocer oportunidades profesionales en el campo de la ciberseguridad.</li>
+        </ul>
+    </section>
+    <section>
+        <p>
+            <a href="{% url 'producto' %}">Volver a la página de productos</a>
+        </p>
+    </section>
+   
+
+    {% endblock %}
+</body>
+
+</html>

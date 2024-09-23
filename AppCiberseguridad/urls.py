@@ -8,6 +8,9 @@ from django.conf.urls.static import static
 urlpatterns = [
     
     path('', views.padre, name='padre'), 
+    path('mas_info_nivelinicial/', views.mas_info_nivelinicial ,name='mas_info_nivelinicial') ,
+    path('mas_info_nivelmediol/',views.mas_info_nivelmediol ,name='mas_info_Nivelmediol') , 
+    path('mas_info_nivelavanzado/', views.mas_info_nivelavanzado,name='mas_info_Nivelavanzado'),
     path('producto/', views.Producto, name='producto'), 
     path('cliente/', views.Cliente, name='cliente'),
     path('opiniones/', views.Opiniones, name='opiniones'), 
@@ -21,7 +24,8 @@ urlpatterns = [
     path('eliminarCliente/<cliente_nombre>/', views.eliminarCliente, name="EliminarCliente"),
     path('leeropinion/', views.leerOpinion, name='leerOpinion'),
     path('eliminarOpinion/<opinion_nombre>/', views.eliminarOpinion, name="EliminarOpinion"),
-    path('opiniones/', views.listar_opiniones, name='listar_opiniones'),   
+    path('opiniones/', views.listar_opiniones, name='listar_opiniones'), 
+      
 ]
 
 urls_vistas_clases = [

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivel Medio de Ciberseguridad</title>
+</head>
+
+<body>
+
+    {% extends "AppCiberseguridad/padre.html" %}
+
+    {% load static %}
+
+    {% block contenidoQueCambia %}
+
+    <h1>Nivel Medio de Ciberseguridad</h1>
+
+    <section>
+        <p>
+            Este curso intermedio es ideal para aquellos que ya tienen un conocimiento básico de ciberseguridad y desean profundizar en técnicas y herramientas más avanzadas. A lo largo de este nivel, te adentrarás en temas más complejos y críticos para la protección de sistemas y redes.
+        </p>
+
+        <ul>
+            <li><strong>Gestión de vulnerabilidades:</strong> Cómo identificar, evaluar y mitigar vulnerabilidades en infraestructuras digitales.</li>
+            <li><strong>Criptografía aplicada:</strong> Principios de cifrado y cómo implementar soluciones criptográficas para proteger datos sensibles.</li>
+            <li><strong>Políticas de seguridad:</strong> Desarrollo y aplicación de políticas de seguridad en entornos empresariales.</li>
+            <li><strong>Análisis de incidentes:</strong> Técnicas para identificar, analizar y responder ante incidentes de seguridad.</li>
+            <li><strong>Respuesta ante ciberataques:</strong> Procedimientos efectivos para contener y mitigar ciberataques en tiempo real.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Temas Avanzados</h2>
+        <p>Este curso cubre una gama de temas avanzados que te ayudarán a fortalecer tus habilidades en ciberseguridad, incluyendo:</p>
+
+        <ol>
+            <li><strong>Control de Acceso y Autenticación:</strong> Métodos para implementar autenticación multifactor y controles de acceso robustos.</li>
+            <li><strong>Auditorías de Seguridad:</strong> Realización de auditorías para evaluar y mejorar la seguridad de los sistemas.</li>
+            <li><strong>Seguridad en Redes:</strong> Uso avanzado de firewalls, sistemas de detección de intrusos (IDS) y redes privadas virtuales (VPN).</li>
+            <li><strong>Forense Digital:</strong> Herramientas y técnicas para la recuperación y análisis de datos en incidentes de seguridad.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Objetivos del curso</h2>
+        <p>Al finalizar este nivel, serás capaz de:</p>
+
+        <ul>
+            <li>Implementar medidas avanzadas para la gestión de vulnerabilidades y ciberataques.</li>
+            <li>Desarrollar e implementar políticas de seguridad robustas en diferentes tipos de organizaciones.</li>
+            <li>Aplicar criptografía para proteger la información crítica.</li>
+            <li>Responder eficazmente ante incidentes de seguridad en tiempo real.</li>
+        </ul>
+    </section>
+    <section></section>
+        <p>
+            <a href="{% url 'producto' %}">Volver a la página de productos</a>
+        </p>
+    </section>
+    
+    {% endblock %}
+</body>
+
+</html>

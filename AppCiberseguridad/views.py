@@ -20,14 +20,22 @@ def Inicio(req):
 def Producto(req):
     return render(req, 'AppCiberseguridad/producto.html')
 
-@login_required
+
 def Cliente(req):
   return render(req, 'AppCiberseguridad/cliente.html')
 
-@login_required
+
 def Opiniones(req):
     return render(req, 'AppCiberseguridad/opiniones.html')
 
+def mas_info_nivelinicial(req):
+    return render(req, 'AppCiberseguridad/mas_info_nivelinicial.html')
+
+def mas_info_nivelmediol(req):
+    return render(req, 'AppCiberseguridad/mas_info_nivelmediol.html')
+
+def mas_info_nivelavanzado(req):
+    return render(req, 'AppCiberseguridad/mas_info_nivelavanzado.html')
 
 ### def app_form , es el formulario para agragar clientes a la base de datos ! 
 def app_form(req):
@@ -70,11 +78,12 @@ def app_formOpiniones(req):
         return render ( req, "AppCiberseguridad/padre.html")
     
     return render (req , 'AppCiberseguridad/appFormularioOpiniones.html')
-    
+ 
+@login_required 
 def busquedaCliente(request) :
     return render(request, "AppCiberseguridad/busquedaCliente.html")
 
-    
+@login_required    
 def buscar(request):
     cliente_nombre = request.GET.get('cliente')
     
@@ -88,11 +97,13 @@ def buscar(request):
         'resultados': resultados,
     })
 
+@login_required
 def leerCliente(req):
     clientes=ClienteModel.objects.all() 
     contexto= {"clientes":clientes}
     return render (req, "AppCiberseguridad/leerCLientes.html",contexto) 
-    
+ 
+@login_required 
 def eliminarCliente(req, cliente_nombre):
     cliente= ClienteModel.objects.get(nombre=cliente_nombre)
     cliente.delete()
@@ -102,6 +113,7 @@ def eliminarCliente(req, cliente_nombre):
     contexto={"clientes":clientes}
     
     return render(req, "AppCiberseguridad/leerCLientes.html",contexto ) 
+
 
 def leerOpinion(req):
     opiniones=OpinionesModel.objects.all()
@@ -121,3 +133,5 @@ def eliminarOpinion(req, opinion_nombre):
 def listar_opiniones(request):
     opiniones= OpinionesModel.objects.all() 
     return render ( request , ' opiniones.html', {'opiniones': opiniones})
+
+

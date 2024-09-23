@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivel Avanzado de Ciberseguridad</title>
+</head>
+
+<body>
+    {% extends "AppCiberseguridad/padre.html" %}
+
+    {% load static %}
+
+    {% block contenidoQueCambia %}
+
+    <h1>Nivel Avanzado de Ciberseguridad</h1>
+
+    <section>
+        <p>
+            Este curso avanzado está dirigido a profesionales de ciberseguridad que buscan perfeccionar sus habilidades y adquirir conocimientos especializados. Se enfocará en la defensa proactiva contra ciberamenazas, el análisis forense digital y la seguridad en entornos de nube.
+        </p>
+        
+        <p>
+            A lo largo de este curso, explorarás temas avanzados que incluyen:
+        </p>
+
+        <ul>
+            <li><strong>Defensa Proactiva:</strong> Estrategias para anticipar y mitigar ciberamenazas antes de que ocurran, incluyendo técnicas de threat hunting.</li>
+            <li><strong>Análisis Forense Digital:</strong> Métodos para investigar incidentes de seguridad, recolectar evidencias y generar informes de forense.</li>
+            <li><strong>Seguridad en la Nube:</strong> Mejores prácticas y estándares para proteger datos y aplicaciones en entornos de nube, como la configuración segura de AWS y Azure.</li>
+            <li><strong>Seguridad de Aplicaciones:</strong> Evaluación de la seguridad en el ciclo de vida del desarrollo de software (SDLC), incluyendo pruebas de penetración y análisis de código estático.</li>
+            <li><strong>Gestión de Incidentes:</strong> Protocolos y herramientas para responder eficazmente a ciberincidentes, incluyendo la elaboración de planes de respuesta y comunicación.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Temas Avanzados</h2>
+        <p>Este curso incluye una variedad de temas avanzados, tales como:</p>
+
+        <ol>
+            <li><strong>Seguridad de Infraestructuras Críticas:</strong> Estrategias para proteger sistemas y redes en sectores críticos, como energía y salud.</li>
+            <li><strong>Inteligencia de Amenazas:</strong> Uso de información sobre amenazas para mejorar la postura de seguridad de una organización.</li>
+            <li><strong>Privacidad de Datos:</strong> Normativas y mejores prácticas para asegurar la privacidad de la información en un entorno digital.</li>
+            <li><strong>Redes Definidas por Software (SDN):</strong> Implementación y gestión de la seguridad en arquitecturas de redes modernas.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Objetivos del curso</h2>
+        <p>Al concluir este nivel, estarás capacitado para:</p>
+
+        <ul>
+            <li>Liderar la seguridad informática en cualquier organización.</li>
+            <li>Implementar estrategias robustas para prevenir, detectar y mitigar ciberataques sofisticados.</li>
+            <li>Realizar análisis forense digital para investigar brechas de seguridad y gestionar crisis de seguridad.</li>
+            <li>Aplicar medidas de seguridad efectivas en entornos de nube y asegurar aplicaciones web.</li>
+            <li>Desarrollar políticas de seguridad integrales y formar equipos de respuesta ante incidentes.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Metodología del curso</h2>
+        <p>El curso se desarrollará a través de:</p>
+        <ul>
+            <li><strong>Clases Teóricas:</strong> Exposición de conceptos y teorías fundamentales.</li>
+            <li><strong>Estudios de Caso:</strong> Análisis de incidentes reales y lecciones aprendidas.</li>
+            <li><strong>Laboratorios Prácticos:</strong> Ejercicios prácticos para aplicar los conocimientos adquiridos.</li>
+            <li><strong>Evaluaciones:</strong> Pruebas y proyectos que permitirán medir tu progreso y comprensión del contenido.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Requisitos previos</h2>
+        <p>Para participar en este curso, se recomienda tener conocimientos previos en:</p>
+        <ul>
+            <li>Ciberseguridad a nivel básico o intermedio.</li>
+            <li>Redes y protocolos de comunicación.</li>
+            <li>Programación básica (preferiblemente en Python o Java).</li>
+        </ul>
+    </section>
+    <section>
+        <p>
+            <a href="{% url 'producto' %}">Volver a la página de productos</a>
+        </p>
+    </section>
+    
+
+    {% endblock %}
+</body>
+
+</html>

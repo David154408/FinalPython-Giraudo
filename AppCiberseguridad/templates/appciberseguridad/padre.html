@@ -33,6 +33,7 @@
                         <li class="nav-item"><a class="nav-link" href="{% url 'cliente' %}"> Cliente</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'BusquedaCliente' %}">Buscador</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'AppForm' %}">Agregar Cliente</a></li>
+                    
 
                         {# DROPDOWN PARA LA CUENTA DE USUARIO #}
                         {% if request.user.is_authenticated %}
