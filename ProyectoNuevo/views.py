@@ -1,5 +1,6 @@
 from django.http import HttpResponse 
 from django.template import loader 
+from django.shortcuts import render
 
 def saludo(request):
     return HttpResponse("Hola Profes  ")
@@ -18,3 +19,6 @@ def probando_plantilla(request):
     documento= plantilla.render(diccionario)
     
     return HttpResponse(documento)
+
+def home(request):
+    return render(request, 'AppCiberseguridad/index.html')

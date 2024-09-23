@@ -7,8 +7,7 @@ from AppCiberseguridad.models import Opiniones as OpinionesModel
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-def home(request):
-    return render(request, 'AppCiberseguridad/index.html')
+
 
 def padre(req):
     return render(req, 'AppCiberseguridad/padre.html')
@@ -119,3 +118,6 @@ def eliminarOpinion(req, opinion_nombre):
     
     return render(req,"AppCiberseguridad/leerOpinion.html", contexto) 
    
+def listar_opiniones(request):
+    opiniones= OpinionesModel.objects.all() 
+    return render ( request , ' opiniones.html', {'opiniones': opiniones})

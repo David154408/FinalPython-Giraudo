@@ -13,9 +13,22 @@
     
     {% block contenidoQueCambia %}
         
-      <p> Este es Opiniones </p>
     
-    {% endblock %}
+    <h1>Lista de Opiniones </h1>
+    <ul>
 
+        {% for opinion in opiniones %} 
+        
+        <li>{{ opinion.nombre }} - {{ opinion.descripcion }}</li>
+
+        {% empty %}
+
+        <li>No hay opiniones disponibles.</li>
+        {% endfor %}
+
+    </ul>
+
+      
+    {% endblock %}
 </body>
 </html>

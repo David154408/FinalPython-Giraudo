@@ -3,17 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Únete a Nuestro Equipo</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6em;
+            margin-bottom: 20px;
+            padding: 0 20px;
+        }
+        ul {
+            text-align: left;
+            list-style-type: square;
+            padding-left: 40px;
+            margin-bottom: 30px;
+        }
+        li {
+            font-size: 1.2em;
+            line-height: 1.6em;
+            margin-bottom: 10px;
+        }
+       
+       
+       
+    </style>
 </head>
 <body>
-{% extends "AppCiberseguridad/padre.html" %}  
-     
-{% load static %}
 
-{% block contenidoQueCambia %}
+    {% extends "AppCiberseguridad/padre.html" %}
+    {% load static %}
+    
+    {% block contenidoQueCambia %}
+    <br>
 
-<p> Esta es mi plantilla de "clientes" </p>
-   
-{% endblock %}
+    <h1>¿Por qué sumarte a nuestro equipo?</h1>
+
+    <br>
+
+    <h2>Mantente conectado y actualizado en ciberseguridad</h2>
+
+    <br>
+
+    <p>
+        La ciberseguridad es un campo crucial en el mundo moderno, donde la información digital se encuentra en constante riesgo. En nuestro equipo, no solo te mantendrás al tanto de las últimas amenazas y soluciones, sino que también formarás parte de una comunidad dedicada a proteger la integridad de los sistemas y datos.
+    </p>
+
+    <p>
+        Unirte a nosotros te dará acceso a recursos exclusivos, actualizaciones frecuentes y foros interactivos con expertos en la materia. Es la oportunidad perfecta para crecer profesionalmente en un área que no deja de evolucionar.
+    </p>
+
+    <br>
+
+    <h2>¿Qué beneficios obtendrás?</h2>
+    <ul>
+        <li>Acceso a cursos y certificaciones especializadas en ciberseguridad.</li>
+        <li>Participación en webinars y talleres organizados por profesionales del sector.</li>
+        <li>Soporte técnico y mentoría personalizada para ayudarte a mejorar tus habilidades.</li>
+        <li>Descuentos en herramientas de software especializadas para la protección de redes y sistemas.</li>
+        <li>Una comunidad activa donde podrás compartir conocimientos y resolver dudas.</li>
+    </ul>
+
+    <br>
+
+    <p>
+        Además de estos beneficios, serás parte de un equipo dinámico y siempre en movimiento, donde la innovación y la colaboración son fundamentales. Aquí, cada día trae nuevos retos y aprendizajes que te permitirán destacar en el ámbito de la ciberseguridad.
+    </p>
+
+    <br> 
+    <h2>Cómo registrarse</h2>
+    <p>
+        Registrarse es fácil y rápido. Solo haz clic en el botón de abajo para crear una cuenta y comenzar tu viaje hacia la ciberseguridad profesional. Una vez registrado, tendrás acceso completo a todos nuestros recursos y podrás unirte a los debates en los foros.
+    </p>
+    
+    <a href="{% url 'Register' %}">¡Crear cuenta ahora!</a>
+
+    {% endblock %}
+    
 </body>
 </html>

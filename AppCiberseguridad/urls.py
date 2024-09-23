@@ -21,7 +21,7 @@ urlpatterns = [
     path('eliminarCliente/<cliente_nombre>/', views.eliminarCliente, name="EliminarCliente"),
     path('leeropinion/', views.leerOpinion, name='leerOpinion'),
     path('eliminarOpinion/<opinion_nombre>/', views.eliminarOpinion, name="EliminarOpinion"),
-       
+    path('opiniones/', views.listar_opiniones, name='listar_opiniones'),   
 ]
 
 urls_vistas_clases = [
