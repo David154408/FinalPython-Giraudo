@@ -1,28 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "AppCiberseguridad/padre.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+{% block title %}
+Lista de Opiniones
+{% endblock %}
 
 {% block contenidoQueCambia %}
-<h1>Lista de Opiniones</h1>
+<h1 style="text-align: center; font-size: 2.5em; color: #333; margin-bottom: 30px;">Lista de Opiniones</h1>
 
-<ul>
+<ul style="list-style-type: none; padding: 0;">
     {% for opinion in object_list %}
-    <li>
-        <strong>{{ opinion.nombre }}</strong>: {{ opinion.descripcion }}
-        <a href="{% url 'Detail' opinion.pk %}">Ver detalles</a> 
-        <a href="{% url 'Edit' opinion.pk %}">Editar</a> 
-        <a href="{% url 'Delete' opinion.pk %}">Eliminar</a>
+    <li style="background-color: #f9f9f9; margin: 15px 0; padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+        <div style="margin-bottom: 10px;">
+            <strong style="font-size: 1.2em; font-weight: bold;">{{ opinion.nombre }}</strong>: 
+            <span style="color: #555;">{{ opinion.descripcion }}</span>
+        </div>
+        <div>
+            <a href="{% url 'OpinionesDetail' opinion.pk %}" style="margin-right: 15px; text-decoration: none; color: #007bff;">Ver detalles</a> 
+            <a href="{% url 'OpinionesEdit' opinion.pk %}" style="margin-right: 15px; text-decoration: none; color: #007bff;">Editar</a> 
+            <a href="{% url 'OpinionesDelete' opinion.pk %}" style="text-decoration: none; color: #dc3545;">Eliminar</a>
+        </div>
     </li>
     {% endfor %}
 </ul>
 
-<a href="{% url 'Create' %}">Agregar Nueva Opinión</a>
-{% endblock contenidoQueCambia %}
-</body>
-
-</html>
+<a href="{% url 'OpinionesCreate' %}" style="display: inline-block; padding: 10px 20px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; margin-top: 20px;">Agregar Nueva Opinión</a>
+{% endblock %}

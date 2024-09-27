@@ -3,26 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Subscription</title>
 </head>
 <body>
 
     {% extends "AppCiberseguridad/padre.html" %}  
-     
-    {% load static %}
-    
-    {% block contenidoQueCambia %}
-    <form action="{% url 'AppForm' %}" method="POST">
-        {% csrf_token %}
-        <p>Nombre: <input type="text" name="nombre" required></p>
-        <p>Correo Electrónico: <input type="email" name="correo_electronico" required></p>
-        <p>Teléfono: <input type="text" name="telefono" required></p>
-        <p>Dirección: <input type="text" name="direccion" required></p>
-        
-        <input type="submit" value="Enviar">
 
+    {% block contenidoQueCambia %}
+    <h1 style="text-align: center; font-size: 2.5em; color: #333; margin-bottom: 30px;">Formulario de Contacto</h1>
+
+    <form action="{% url 'AppForm' %}" method="POST" style="max-width: 500px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+        {% csrf_token %}
         
+        <p style="font-size: 1.2em; color: #333; margin-bottom: 10px;">
+            <label for="nombre" style="display: block;"><strong>Nombre:</strong></label>
+            <input type="text" id="nombre" name="nombre" required style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px;">
+        </p>
+        
+        <p style="font-size: 1.2em; color: #333; margin-bottom: 10px;">
+            <label for="correo_electronico" style="display: block;"><strong>Correo Electrónico:</strong></label>
+            <input type="email" id="correo_electronico" name="correo_electronico" required style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px;">
+        </p>
+        
+        <p style="font-size: 1.2em; color: #333; margin-bottom: 10px;">
+            <label for="telefono" style="display: block;"><strong>Teléfono:</strong></label>
+            <input type="text" id="telefono" name="telefono" required style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px;">
+        </p>
+        
+        <p style="font-size: 1.2em; color: #333; margin-bottom: 30px;">
+            <label for="direccion" style="display: block;"><strong>Dirección:</strong></label>
+            <input type="text" id="direccion" name="direccion" required style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px;">
+        </p>
+
+        <div style="text-align: center;">
+            <input type="submit" value="Enviar" style="padding: 10px 20px; font-size: 1.2em; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        </div>
     </form>
     {% endblock %}
+
 </body>
 </html>

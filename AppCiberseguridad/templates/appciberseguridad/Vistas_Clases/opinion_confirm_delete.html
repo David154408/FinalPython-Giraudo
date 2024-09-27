@@ -4,24 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Confirmar </title>
 </head>
 
 <body>
     {% extends "AppCiberseguridad/padre.html" %}
 
-{% block contenidoQueCambia %}
-<h1>Confirmar Eliminación</h1>
+    {% block contenidoQueCambia %}
+    <h1 style="text-align: center; font-size: 2.5em; color: #dc3545; margin-bottom: 30px;">Confirmar Eliminación</h1>
 
-<p>¿Estás seguro de que quieres eliminar esta opinión?</p>
+    <p style="text-align: center; font-size: 1.2em; color: #333; margin-bottom: 20px;">¿Estás seguro de que quieres
+        eliminar esta opinión?</p>
 
-<form method="post">
-    {% csrf_token %}
-    <button type="submit">Confirmar</button>
-</form>
-
-<a href="{% url 'List' %}">Cancelar</a>
-{% endblock %}
+    <form method="post" style="text-align: center;">
+        {% csrf_token %}
+        <button type="submit"
+            style="padding: 10px 20px; background-color: #dc3545; color: white; border: none; border-radius: 5px; font-size: 1.1em; cursor: pointer; margin-right: 10px;">Confirmar</button>
+        <a href="{% url 'OpinionesList' %}"
+            style="padding: 10px 20px; background-color: #6c757d; color: white; text-decoration: none; border-radius: 5px; font-size: 1.1em;">Cancelar</a>
+    </form>
+    {% endblock %}
 </body>
 
 </html>

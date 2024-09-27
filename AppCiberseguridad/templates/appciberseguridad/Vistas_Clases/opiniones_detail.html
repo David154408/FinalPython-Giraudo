@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Detalles de la Opinión</title>
 </head>
 <body>
     {% extends "AppCiberseguridad/padre.html" %}
 
-{% block contenidoQueCambia %}
-<h1>Detalles de la Opinión</h1>
+    {% block contenidoQueCambia %}
+    <h1 style="text-align: center; font-size: 2.5em; color: #333; margin-bottom: 30px;">Detalles de la Opinión</h1>
 
-<p><strong>Nombre:</strong> {{ object.nombre }}</p>
-<p><strong>Descripción:</strong> {{ object.descripcion }}</p>
+    <p style="font-size: 1.2em; color: #333; margin-bottom: 10px;"><strong>Nombre:</strong> {{ object.nombre }}</p>
+    <p style="font-size: 1.2em; color: #555; margin-bottom: 10px;"><strong>Descripción:</strong> {{ object.descripcion }}</p>
+    <p style="font-size: 1.2em; color: #777; margin-bottom: 30px;"><strong>Id en nuestra base:</strong> {{ object.id }}</p>
 
-<a href="{% url 'Edit' object.pk %}">Editar</a> |
-<a href="{% url 'Delete' object.pk %}">Eliminar</a> |
-<a href="{% url 'List' %}">Volver a la lista</a>
-{% endblock %}
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="{% url 'OpinionesEdit' object.pk %}" style="padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; margin-right: 10px;">Editar</a>
+        <a href="{% url 'OpinionesDelete' object.pk %}" style="padding: 10px 20px; background-color: #dc3545; color: white; text-decoration: none; border-radius: 5px; margin-right: 10px;">Eliminar</a>
+        <a href="{% url 'OpinionesList' %}" style="padding: 10px 20px; background-color: #6c757d; color: white; text-decoration: none; border-radius: 5px;">Volver a la lista</a>
+    </div>
+    {% endblock %}
 </body>
 </html>
