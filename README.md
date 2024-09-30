@@ -54,5 +54,5 @@ video de uso y parter de la pagina  :
 https://drive.google.com/file/d/1gTpL28SmSSFITg0XtjQLF2xOXzhIZFvs/view?usp=sharing
 
 cosos de pureba : 
-https://docs.google.com/document/d/10cQhd0QIS2_bJzfQte9IJ4pxmxDE7R4Ttm2GZXh9gEI/edit?usp=drive_link
 
+https://docs.google.com/document/d/10cQhd0QIS2_bJzfQte9IJ4pxmxDE7R4Ttm2GZXh9gEI/edit?usp=sharing
