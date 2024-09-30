@@ -50,7 +50,9 @@ Taminem podemos editar la cuenta , el cual nos da la alternativa de agregar un a
 
 Graicas al tutor que es un cracks Dieguito !!!!!!!!!! 
 
-video : 
+video de uso y parter de la pagina  : 
 https://drive.google.com/file/d/1gTpL28SmSSFITg0XtjQLF2xOXzhIZFvs/view?usp=sharing
 
-https://drive.google.com/file/d/1gTpL28SmSSFITg0XtjQLF2xOXzhIZFvs/view?usp=sharing
+cosos de pureba : 
+https://docs.google.com/document/d/10cQhd0QIS2_bJzfQte9IJ4pxmxDE7R4Ttm2GZXh9gEI/edit?usp=drive_link
+
